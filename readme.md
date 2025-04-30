@@ -1,53 +1,60 @@
-# BinanceTrader Pro: Advanced Algorithmic Trading Bot
+# Demo Cryptocurrency Trading Bot: Showcase of Coding Capabilities
+
+## IMPORTANT NOTICE
+
+**This is a DEMO project created solely to showcase coding capabilities. It is NOT intended for actual trading use and should NOT be reused in production environments.**
+
+This repository contains intentionally simplified and modified code that demonstrates coding patterns and architecture, but does not contain any actual trading strategies or sensitive information.
 
 ## Project Overview
 
-BinanceTrader Pro is a sophisticated, fully automated trading bot developed for the Binance Futures market that leverages advanced technical indicators to execute high-precision trades while maintaining robust risk management. This system operates 24/7 in a containerized environment with comprehensive state persistence and error recovery mechanisms.
+This demo trading bot is a showcase of an architecture for a cryptocurrency exchange WebSocket client that could, in theory, leverage technical indicators to process market data. The real implementation would require significant enhancements, proper testing, and risk management features before being suitable for actual trading.
 
-## Key Features
+## Demonstrated Technical Concepts
 
-* **Intelligent Signal Detection** - Utilizes proprietary technical indicators to identify high-probability entry and exit points
-* **Advanced Position Management** - Implements dynamic trailing stop-losses that adapt to market volatility
-* **Risk Mitigation System** - Features daily loss limits, irregular market detection, and automatic shutdown protocols
-* **Cloud-Native Architecture** - Designed for AWS EC2 deployment with containerization for seamless scaling and operation
-* **Resilient State Management** - Employs persistent state tracking to survive unexpected shutdowns or network interruptions
-* **API Failure Recovery** - Incorporates exponential backoff and multiple endpoint fallback for reliable operation in variable network conditions
-* **Performance Analytics** - Detailed metrics and reporting for continuous trading strategy improvement
+* **WebSocket Connectivity** - Handling real-time data streams from cryptocurrency exchanges
+* **Technical Indicators** - Implementation of common technical analysis indicators
+* **Event-Driven Architecture** - Using callbacks and subscriptions for real-time processing
+* **Error Handling** - Comprehensive error catching and logging
+* **Reconnection Logic** - Automatic handling of connection failures with exponential backoff
+* **Containerization** - Docker setup for consistent deployment
 
 ## Technical Architecture
 
-The trading bot has been built using a modern technology stack:
+The demo bot showcases a modern technology stack:
 
-* **Python 3.9** with asynchronous processing for efficient API handling
-* **Docker** containerization for consistent deployment across environments
-* **CCXT Library** for standardized exchange API interactions
-* **Pandas/NumPy** for high-performance numerical operations and technical analysis
-* **Flask** microservice architecture for API endpoints and monitoring
-* **Advanced Error Handling** with rate limit management and automatic recovery
+* **Python 3.9** with asynchronous processing for efficient data handling
+* **Docker** containerization for consistent deployment
+* **Pandas/NumPy** for numerical operations and technical analysis
+* **WebSocket** communication for real-time market data
 
-## Development Journey
+## Code Organization
 
-This project was created by a single developer (me) over the course of just a few days, showcasing rapid iteration and efficient implementation of complex trading algorithms. What makes this project particularly impressive:
+* **ws_indicators.py** - Technical indicators calculator
+* **exchange_ws_client.py** - WebSocket client for exchange communication
+* **Docker configuration** - Containerization setup
+* **Shell scripts** - Deployment and setup automation
 
-1. **Zero to Production in Days** - Developed the entire system from concept to production-ready in a remarkably short timeframe
-2. **Cutting-Edge Development Approach** - Leveraged AI-assisted development techniques including:
-   * **Vibe Coding** methodology for rapid prototyping
-   * **AI Agent Collaboration** to accelerate problem-solving
-   * **Advanced Prompt Engineering** to guide complex implementation decisions
-3. **Solo Full-Stack Implementation** - Handled everything from algorithmic trading logic to devops deployment pipelines independently
+## Development Approaches Demonstrated
 
-## Performance and Risk Management
+This project showcases several modern development approaches:
 
-The system employs multiple layers of protection:
+1. **Modular Architecture** - Separation of concerns between data collection and analysis
+2. **Asynchronous Processing** - Handling real-time data streams efficiently
+3. **Error Resilience** - Comprehensive error handling and recovery mechanisms
+4. **Configuration Management** - Using environment variables for flexible configuration
 
-* **Leverage Control** - Fixed at 2x to balance opportunity with controlled risk
-* **Trailing Stop Loss** - 2% dynamic protection that follows price movement
-* **Maximum Position Sizing** - Strict limits on total position value to maintain account safety
-* **Daily Loss Circuit Breaker** - Automatic trading pause if daily loss threshold is exceeded
-* **Market Anomaly Detection** - Identifies and avoids trading during irregular market conditions
+## Disclaimer
+
+This code is provided for demonstration purposes only. It:
+
+* Contains intentionally modified algorithms
+* Does not implement any real trading strategies
+* Replaces actual exchange-specific code with generic implementations
+* Should not be used as the basis for actual trading systems without substantial enhancements
+
+**The author assumes no responsibility for any use of this code in actual trading or financial scenarios.**
 
 ---
 
-*This project demonstrates not only technical proficiency in algorithmic trading but also showcases modern development methodologies that combine human expertise with AI-assisted coding for rapid, high-quality implementation.*
-
-> "This trading bot represents the perfect fusion of technical analysis principles with modern software engineering practices." - Professional Trading Systems Review 
+*This project demonstrates technical capabilities in building complex, real-time data processing systems, but is NOT a functional trading system.* 
