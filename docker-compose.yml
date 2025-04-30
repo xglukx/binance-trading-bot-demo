@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  trading-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: binance-trading-bot
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+      - ./.env:/app/.env
+    environment:
+      - USE_TESTNET=true
+      - READ_ONLY_MODE=true
+      - TEST_MODE=true
+      - DEBUG_API=true
+      - PERSISTENCE_FILE=/data/bot_state.json
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "10" 
